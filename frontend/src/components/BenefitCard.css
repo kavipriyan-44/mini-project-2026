@@ -1,0 +1,94 @@
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--category-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.benefit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.benefit-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(247, 182, 0, 0.1);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.benefit-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.benefit-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.benefit-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.benefit-merchant {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.85rem;
+}
+
+.merchant-label {
+    color: var(--text-muted);
+}
+
+.merchant-name {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.benefit-validity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.benefit-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect */
+.benefit-card:hover {
+    border-color: var(--category-color);
+}
+
+.benefit-card:hover .benefit-title {
+    color: var(--category-color);
+}
